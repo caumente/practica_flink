@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="sbt: org.apache.kafka:kafka-streams-scala_2.11:2.2.1-cdh6.3.3:jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../.cache/coursier/v1/https/repository.cloudera.com/artifactory/cloudera-repos/org/apache/kafka/kafka-streams-scala_2.11/2.2.1-cdh6.3.3/kafka-streams-scala_2.11-2.2.1-cdh6.3.3.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../.cache/coursier/v1/https/repository.cloudera.com/artifactory/cloudera-repos/org/apache/kafka/kafka-streams-scala_2.11/2.2.1-cdh6.3.3/kafka-streams-scala_2.11-2.2.1-cdh6.3.3-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../.cache/coursier/v1/https/repository.cloudera.com/artifactory/cloudera-repos/org/apache/kafka/kafka-streams-scala_2.11/2.2.1-cdh6.3.3/kafka-streams-scala_2.11-2.2.1-cdh6.3.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
