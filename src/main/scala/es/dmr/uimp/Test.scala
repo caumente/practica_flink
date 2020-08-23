@@ -14,7 +14,11 @@ import DefaultJsonProtocol._
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment
 import org.apache.flink.streaming.api.TimeCharacteristic
 import org.apache.flink.streaming.api.datastream.DataStream
-import org.apache.flink.streaming.api.scala.OutputTag
+import org.apache.flink.streaming.api.functions.co.ProcessJoinFunction
+import org.apache.flink.streaming.api.scala.{KeyedStream, OutputTag}
+import org.apache.flink.streaming.api.windowing.time.Time
+import org.apache.flink.types.Nothing
+import org.apache.flink.util.Collector
 
 import scala.collection.immutable.ListMap
 //import org.apache.flink.streaming.api.functions.co.ProcessJoinFunction
@@ -82,17 +86,42 @@ object Test extends App {
       } yield strHist(uuid, products)
 
     }
-
   }
 
-  val demoParsed = streamDemo.map{event => parser.decode[strDemo](event).right.get}
-  val histParsed = streamHist.map{event => parser.decode[strHist](event).right.get}
 
-  demoParsed
-  //histParsed.keyBy("0").print()
+
+  val demoParsed: DataStream[strDemo] = streamDemo.map{event => parser.decode[strDemo](event).right.get}
+  val histParsed: DataStream[strHist] = streamHist.map{event => parser.decode[strHist](event).right.get}
+
+
+
+  val demoKeyed = demoParsed.keyBy(_.uuid)
+  val histKeyed = histParsed.keyBy(_.uuid)
+
+  val joined = demoKeyed
+    .intervalJoin(histKeyed)
+    .between(Time.milliseconds(0), Time.milliseconds(3001))
+    .process(new ProcessJoinFunction[strDemo, strHist, String] {
+      override def processElement(left: strDemo,
+                                  right: strHist,
+                                  ctx: ProcessJoinFunction[strDemo, strHist, String]#Context, out: Collector[String]): Unit = {
+        out.collect((left.uuid + "," +
+                    left.age + "," +
+                    left.man + "," +
+                    left.woman + "," +
+                    right.uuid + "," +
+                    right.products.values.toList.mkString(",")));
+      }
+    })
+
+  joined.writeAsText("aaaa.csv")
+
+
+
+
+
 
   env.execute()
-
 
 }
 
