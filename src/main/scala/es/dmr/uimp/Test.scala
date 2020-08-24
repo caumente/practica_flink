@@ -109,12 +109,11 @@ object Test extends App {
                     left.age + "," +
                     left.man + "," +
                     left.woman + "," +
-                    right.uuid + "," +
-                    right.products.values.toList.mkString(",")));
+                    right.products.values.toList.mkString(",")))
       }
     })
 
-  joined.writeAsText("aaaa.csv")
+  joined
 
 
 
