@@ -12,7 +12,7 @@ object MyDecoder extends App {
          "uuid": 321,
          "age": 25,
          "man": 0,
-         "woman": 1
+         "woman": 1.csv
        }"""
 
   val stringHist =
@@ -24,7 +24,7 @@ object MyDecoder extends App {
                       "cat42": 0,
                       "cat96": 0,
                       "cat13": 0,
-                      "cat16": 1,
+                      "cat16": 1.csv,
                       "cat11": 0
                      }
        }"""
