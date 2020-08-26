@@ -13,10 +13,11 @@ import spray.json._
 import DefaultJsonProtocol._
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment
 import org.apache.flink.streaming.api.TimeCharacteristic
-import org.apache.flink.streaming.api.datastream.DataStream
+import org.apache.flink.streaming.api.datastream.{DataStream, DataStreamUtils}
 import org.apache.flink.streaming.api.functions.co.ProcessJoinFunction
 import org.apache.flink.streaming.api.scala.{KeyedStream, OutputTag}
 import org.apache.flink.streaming.api.windowing.time.Time
+import org.apache.flink.streaming.connectors.kafka.FlinkKafkaProducer
 import org.apache.flink.types.Nothing
 import org.apache.flink.util.Collector
 import org.pmml4s.model.Model
@@ -25,6 +26,7 @@ import scala.collection.immutable.ListMap
 //import org.apache.flink.streaming.api.functions.co.ProcessJoinFunction
 //import org.apache.flink.streaming.api.windowing.time.Time
 import org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumer
+import org.apache.flink.streaming.connectors.kafka.FlinkKafkaProducer
 import org.apache.flink.streaming.util.serialization.SimpleStringSchema
 import org.apache.flink.streaming.util.serialization.JSONKeyValueDeserializationSchema
 
@@ -110,7 +112,6 @@ object Test extends App {
   val demoKeyed = demoParsed.keyBy(_.uuid)
   val histKeyed = histParsed.keyBy(_.uuid)
 
-
   val joined: DataStream[Array[Int]] = demoKeyed
     .intervalJoin(histKeyed)
     .between(Time.milliseconds(0), Time.milliseconds(3001))
@@ -126,10 +127,7 @@ object Test extends App {
       }
     })
 
-  //joined.map(row => row(0).toInt).print()
-  //val splitted : DataStream[Int] = joined.map(row => row.toInt)
-  //splitted.print()
-  //joined.map(row => row.split(",")).writeAsCsv("aaaa")
+
 
   /*
   En la tercera parte, debemos cargar el modelo generado previamente para evaluar cada uno de los nuevos registros
@@ -138,23 +136,36 @@ object Test extends App {
    */
 
 
-  def modelPredict(model: Model, ds: DataStream[Array[Int]], token: String) : String = {
-    val uuid: DataStream[Int] = ds.map(row => row(0)) // obtenemos el uuid
+  def modelPredict(model: Model, ds: DataStream[Array[Int]], token: String) : DataStream[String] = {
+    val uuid: DataStream[String] = ds.map(row => """"uuid"""" + ": " + row(0).toString) // obtenemos el uuid
     val features: DataStream[Array[Int]] = ds.map(row => row.drop(1)) // eliminamos el uuid de las features
-
 
     val prediction: DataStream[Array[Any]] = features.map(row => model.predict(row)) // evaluo el stream con el modelo
     val prob: DataStream[Double] = prediction.map(x => x(0).toString.toDouble) // calculo la prob de la etiqueta
-    val label = prob.map(x => x.round) // genero la etiqueta de clase
+    val label: DataStream[String] = prob.map(x => """, "value": """ + x.round.toString  + """, "token":"""" + token + """"""") // genero la etiqueta de clase
 
 
-    return """ "uuid": """ + uuid + """, "value": """ + label + """, "token":"""" + token + """""""
-    }
+    val output: DataStream[String] = ds.map(row => """"uuid"""" + ": " + row(0).toString + """, "value": """ + model.predict(row.drop(1))(0).toString.toDouble.round.toString  + """, "token":"""" + token + """"""")
+    output
 
-  val model = Model.fromFile("./src/main/scala/es/dmr/uimp/naive_bayes_model.pmml")
-  val result = modelPredict(model, joined, "my_token")
+  }
 
-  resu
+  val modelNaiveBayes = Model.fromFile("./src/main/scala/es/dmr/uimp/naive_bayes_model.pmml")
+  val streamOutput = modelPredict(modelNaiveBayes, joined, "my_token")
+
+
+
+  /*
+  Finalmente definimos unas nuevas propiedades para el producer desde el que emitiremos el resultado..
+   */
+
+
+  val propertiesProd = new Properties()
+  propertiesProd.setProperty("bootstrap.servers", "localhost:9092")
+
+  val myProducer = new FlinkKafkaProducer[String]("my-topic", new SimpleStringSchema(), propertiesProd)
+  streamOutput.addSink(myProducer)
+
 
 
 

@@ -1,0 +1,1389 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PMML xmlns="http://www.dmg.org/PMML-4_4" xmlns:data="http://jpmml.org/jpmml-model/InlineTable" version="4.3">
+	<Header>
+		<Application name="JPMML-SkLearn" version="1.6.4"/>
+		<Timestamp>2020-08-15T11:00:11Z</Timestamp>
+	</Header>
+	<MiningBuildTask>
+		<Extension>PMMLPipeline(steps=[('classifier', GaussianNB())])</Extension>
+	</MiningBuildTask>
+	<DataDictionary>
+		<DataField name="label" optype="categorical" dataType="integer">
+			<Value value="0"/>
+			<Value value="1"/>
+		</DataField>
+		<DataField name="age" optype="continuous" dataType="double"/>
+		<DataField name="man" optype="continuous" dataType="double"/>
+		<DataField name="woman" optype="continuous" dataType="double"/>
+		<DataField name="cat17" optype="continuous" dataType="double"/>
+		<DataField name="cat74" optype="continuous" dataType="double"/>
+		<DataField name="cat42" optype="continuous" dataType="double"/>
+		<DataField name="cat96" optype="continuous" dataType="double"/>
+		<DataField name="cat13" optype="continuous" dataType="double"/>
+		<DataField name="cat16" optype="continuous" dataType="double"/>
+		<DataField name="cat11" optype="continuous" dataType="double"/>
+		<DataField name="cat35" optype="continuous" dataType="double"/>
+		<DataField name="cat60" optype="continuous" dataType="double"/>
+		<DataField name="cat68" optype="continuous" dataType="double"/>
+		<DataField name="cat10" optype="continuous" dataType="double"/>
+		<DataField name="cat37" optype="continuous" dataType="double"/>
+		<DataField name="u4" optype="continuous" dataType="double"/>
+		<DataField name="cat29" optype="continuous" dataType="double"/>
+		<DataField name="cat98" optype="continuous" dataType="double"/>
+		<DataField name="cat40" optype="continuous" dataType="double"/>
+		<DataField name="cat46" optype="continuous" dataType="double"/>
+		<DataField name="cat2" optype="continuous" dataType="double"/>
+		<DataField name="cat41" optype="continuous" dataType="double"/>
+		<DataField name="cat44" optype="continuous" dataType="double"/>
+		<DataField name="cat89" optype="continuous" dataType="double"/>
+		<DataField name="cat53" optype="continuous" dataType="double"/>
+		<DataField name="cat23" optype="continuous" dataType="double"/>
+		<DataField name="cat21" optype="continuous" dataType="double"/>
+		<DataField name="cat36" optype="continuous" dataType="double"/>
+		<DataField name="cat8" optype="continuous" dataType="double"/>
+		<DataField name="cat20" optype="continuous" dataType="double"/>
+		<DataField name="cat67" optype="continuous" dataType="double"/>
+		<DataField name="cat4" optype="continuous" dataType="double"/>
+		<DataField name="cat81" optype="continuous" dataType="double"/>
+		<DataField name="cat84" optype="continuous" dataType="double"/>
+		<DataField name="cat27" optype="continuous" dataType="double"/>
+		<DataField name="cat55" optype="continuous" dataType="double"/>
+		<DataField name="u9" optype="continuous" dataType="double"/>
+		<DataField name="cat34" optype="continuous" dataType="double"/>
+		<DataField name="cat22" optype="continuous" dataType="double"/>
+		<DataField name="cat71" optype="continuous" dataType="double"/>
+		<DataField name="cat32" optype="continuous" dataType="double"/>
+		<DataField name="cat3" optype="continuous" dataType="double"/>
+		<DataField name="cat43" optype="continuous" dataType="double"/>
+		<DataField name="cat52" optype="continuous" dataType="double"/>
+		<DataField name="cat83" optype="continuous" dataType="double"/>
+		<DataField name="cat7" optype="continuous" dataType="double"/>
+		<DataField name="cat26" optype="continuous" dataType="double"/>
+		<DataField name="cat15" optype="continuous" dataType="double"/>
+		<DataField name="u3" optype="continuous" dataType="double"/>
+		<DataField name="cat70" optype="continuous" dataType="double"/>
+		<DataField name="u5" optype="continuous" dataType="double"/>
+		<DataField name="cat24" optype="continuous" dataType="double"/>
+		<DataField name="cat49" optype="continuous" dataType="double"/>
+		<DataField name="cat1" optype="continuous" dataType="double"/>
+		<DataField name="cat19" optype="continuous" dataType="double"/>
+		<DataField name="u1" optype="continuous" dataType="double"/>
+		<DataField name="cat77" optype="continuous" dataType="double"/>
+		<DataField name="cat72" optype="continuous" dataType="double"/>
+		<DataField name="cat91" optype="continuous" dataType="double"/>
+		<DataField name="cat73" optype="continuous" dataType="double"/>
+		<DataField name="cat57" optype="continuous" dataType="double"/>
+		<DataField name="cat87" optype="continuous" dataType="double"/>
+		<DataField name="cat75" optype="continuous" dataType="double"/>
+		<DataField name="cat54" optype="continuous" dataType="double"/>
+		<DataField name="cat33" optype="continuous" dataType="double"/>
+		<DataField name="cat61" optype="continuous" dataType="double"/>
+		<DataField name="cat59" optype="continuous" dataType="double"/>
+		<DataField name="cat63" optype="continuous" dataType="double"/>
+		<DataField name="cat9" optype="continuous" dataType="double"/>
+		<DataField name="cat99" optype="continuous" dataType="double"/>
+		<DataField name="cat76" optype="continuous" dataType="double"/>
+		<DataField name="cat95" optype="continuous" dataType="double"/>
+		<DataField name="u0" optype="continuous" dataType="double"/>
+		<DataField name="cat86" optype="continuous" dataType="double"/>
+		<DataField name="cat97" optype="continuous" dataType="double"/>
+		<DataField name="cat58" optype="continuous" dataType="double"/>
+		<DataField name="cat69" optype="continuous" dataType="double"/>
+		<DataField name="cat88" optype="continuous" dataType="double"/>
+		<DataField name="cat0" optype="continuous" dataType="double"/>
+		<DataField name="cat56" optype="continuous" dataType="double"/>
+		<DataField name="u2" optype="continuous" dataType="double"/>
+		<DataField name="cat85" optype="continuous" dataType="double"/>
+		<DataField name="cat25" optype="continuous" dataType="double"/>
+		<DataField name="cat94" optype="continuous" dataType="double"/>
+		<DataField name="u6" optype="continuous" dataType="double"/>
+		<DataField name="cat47" optype="continuous" dataType="double"/>
+		<DataField name="cat51" optype="continuous" dataType="double"/>
+		<DataField name="cat80" optype="continuous" dataType="double"/>
+		<DataField name="cat93" optype="continuous" dataType="double"/>
+		<DataField name="cat5" optype="continuous" dataType="double"/>
+		<DataField name="cat18" optype="continuous" dataType="double"/>
+		<DataField name="cat79" optype="continuous" dataType="double"/>
+		<DataField name="cat48" optype="continuous" dataType="double"/>
+		<DataField name="cat78" optype="continuous" dataType="double"/>
+		<DataField name="cat65" optype="continuous" dataType="double"/>
+		<DataField name="cat14" optype="continuous" dataType="double"/>
+		<DataField name="cat50" optype="continuous" dataType="double"/>
+		<DataField name="cat30" optype="continuous" dataType="double"/>
+		<DataField name="cat31" optype="continuous" dataType="double"/>
+		<DataField name="cat92" optype="continuous" dataType="double"/>
+		<DataField name="cat28" optype="continuous" dataType="double"/>
+		<DataField name="cat38" optype="continuous" dataType="double"/>
+		<DataField name="cat64" optype="continuous" dataType="double"/>
+		<DataField name="cat62" optype="continuous" dataType="double"/>
+		<DataField name="cat6" optype="continuous" dataType="double"/>
+		<DataField name="cat39" optype="continuous" dataType="double"/>
+		<DataField name="cat45" optype="continuous" dataType="double"/>
+		<DataField name="cat66" optype="continuous" dataType="double"/>
+		<DataField name="cat12" optype="continuous" dataType="double"/>
+		<DataField name="cat82" optype="continuous" dataType="double"/>
+		<DataField name="u7" optype="continuous" dataType="double"/>
+		<DataField name="u8" optype="continuous" dataType="double"/>
+		<DataField name="cat90" optype="continuous" dataType="double"/>
+	</DataDictionary>
+	<NaiveBayesModel threshold="0.0" functionName="classification">
+		<MiningSchema>
+			<MiningField name="label" usageType="target"/>
+			<MiningField name="age"/>
+			<MiningField name="man"/>
+			<MiningField name="woman"/>
+			<MiningField name="cat17"/>
+			<MiningField name="cat74"/>
+			<MiningField name="cat42"/>
+			<MiningField name="cat96"/>
+			<MiningField name="cat13"/>
+			<MiningField name="cat16"/>
+			<MiningField name="cat11"/>
+			<MiningField name="cat35"/>
+			<MiningField name="cat60"/>
+			<MiningField name="cat68"/>
+			<MiningField name="cat10"/>
+			<MiningField name="cat37"/>
+			<MiningField name="u4"/>
+			<MiningField name="cat29"/>
+			<MiningField name="cat98"/>
+			<MiningField name="cat40"/>
+			<MiningField name="cat46"/>
+			<MiningField name="cat2"/>
+			<MiningField name="cat41"/>
+			<MiningField name="cat44"/>
+			<MiningField name="cat89"/>
+			<MiningField name="cat53"/>
+			<MiningField name="cat23"/>
+			<MiningField name="cat21"/>
+			<MiningField name="cat36"/>
+			<MiningField name="cat8"/>
+			<MiningField name="cat20"/>
+			<MiningField name="cat67"/>
+			<MiningField name="cat4"/>
+			<MiningField name="cat81"/>
+			<MiningField name="cat84"/>
+			<MiningField name="cat27"/>
+			<MiningField name="cat55"/>
+			<MiningField name="u9"/>
+			<MiningField name="cat34"/>
+			<MiningField name="cat22"/>
+			<MiningField name="cat71"/>
+			<MiningField name="cat32"/>
+			<MiningField name="cat3"/>
+			<MiningField name="cat43"/>
+			<MiningField name="cat52"/>
+			<MiningField name="cat83"/>
+			<MiningField name="cat7"/>
+			<MiningField name="cat26"/>
+			<MiningField name="cat15"/>
+			<MiningField name="u3"/>
+			<MiningField name="cat70"/>
+			<MiningField name="u5"/>
+			<MiningField name="cat24"/>
+			<MiningField name="cat49"/>
+			<MiningField name="cat1"/>
+			<MiningField name="cat19"/>
+			<MiningField name="u1"/>
+			<MiningField name="cat77"/>
+			<MiningField name="cat72"/>
+			<MiningField name="cat91"/>
+			<MiningField name="cat73"/>
+			<MiningField name="cat57"/>
+			<MiningField name="cat87"/>
+			<MiningField name="cat75"/>
+			<MiningField name="cat54"/>
+			<MiningField name="cat33"/>
+			<MiningField name="cat61"/>
+			<MiningField name="cat59"/>
+			<MiningField name="cat63"/>
+			<MiningField name="cat9"/>
+			<MiningField name="cat99"/>
+			<MiningField name="cat76"/>
+			<MiningField name="cat95"/>
+			<MiningField name="u0"/>
+			<MiningField name="cat86"/>
+			<MiningField name="cat97"/>
+			<MiningField name="cat58"/>
+			<MiningField name="cat69"/>
+			<MiningField name="cat88"/>
+			<MiningField name="cat0"/>
+			<MiningField name="cat56"/>
+			<MiningField name="u2"/>
+			<MiningField name="cat85"/>
+			<MiningField name="cat25"/>
+			<MiningField name="cat94"/>
+			<MiningField name="u6"/>
+			<MiningField name="cat47"/>
+			<MiningField name="cat51"/>
+			<MiningField name="cat80"/>
+			<MiningField name="cat93"/>
+			<MiningField name="cat5"/>
+			<MiningField name="cat18"/>
+			<MiningField name="cat79"/>
+			<MiningField name="cat48"/>
+			<MiningField name="cat78"/>
+			<MiningField name="cat65"/>
+			<MiningField name="cat14"/>
+			<MiningField name="cat50"/>
+			<MiningField name="cat30"/>
+			<MiningField name="cat31"/>
+			<MiningField name="cat92"/>
+			<MiningField name="cat28"/>
+			<MiningField name="cat38"/>
+			<MiningField name="cat64"/>
+			<MiningField name="cat62"/>
+			<MiningField name="cat6"/>
+			<MiningField name="cat39"/>
+			<MiningField name="cat45"/>
+			<MiningField name="cat66"/>
+			<MiningField name="cat12"/>
+			<MiningField name="cat82"/>
+			<MiningField name="u7"/>
+			<MiningField name="u8"/>
+			<MiningField name="cat90"/>
+		</MiningSchema>
+		<Output>
+			<OutputField name="probability(0)" optype="continuous" dataType="double" feature="probability" value="0"/>
+			<OutputField name="probability(1)" optype="continuous" dataType="double" feature="probability" value="1"/>
+		</Output>
+		<BayesInputs>
+			<BayesInput fieldName="age">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="33.426576451858516" variance="131.73819486592657"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="35.66034794229008" variance="131.9479888361586"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="man">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.4202660298562562" variance="0.24364262709062687"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.6889616174614566" variance="0.21429364021179811"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="woman">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.5797339701437438" variance="0.24364262709062687"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.3110383825385434" variance="0.21429364021179811"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat17">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.1450531828984103" variance="0.12401289011461251"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.15442104481674873" variance="0.1305753188200296"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat74">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.12848688308991485" variance="0.11197813704875006"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.17206562894404712" variance="0.14245918136558783"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat42">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.15277104819916476" variance="0.12943218811637255"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.14809819594644758" variance="0.1261652533889471"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat96">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.15018689001176716" variance="0.12763092116568692"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.14822193075799944" variance="0.1262523230858549"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat13">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.17513439929858562" variance="0.14446247456647704"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.12366675740552847" variance="0.10837342360380148"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat16">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.1852172307976281" variance="0.15091194129905633"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.11344626197134301" variance="0.10057634070156725"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat11">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.14791998338755452" variance="0.12603979498726886"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.15269494419559998" variance="0.12937933129814488"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat35">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.1620694031056044" variance="0.13580304476756003"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.14036477022445495" variance="0.12066263458988201"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat60">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.16043123139752197" variance="0.13469318447492074"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.13934395802915192" variance="0.11992735247548561"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat68">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.16467663413396091" variance="0.13755837338988208"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.13355316884852383" variance="0.1157168530244494"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat10">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.1461318382132392" variance="0.12477745715866234"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.1524722215348066" variance="0.12922457628021627"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat37">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.14168454811840983" variance="0.12161017002846501"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.16207404291123265" variance="0.1358061806105661"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="u4">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.14969659214139036" variance="0.1272876555277753"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.14929842361850082" variance="0.1270085374090693"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat29">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.17518631319074318" variance="0.14449620194700918"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.12387710658516667" variance="0.10853170213486926"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat98">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.1652534551579336" variance="0.1379448838015347"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.13589175678685442" variance="0.11742532030990037"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat40">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.15362474331464432" variance="0.1300243146418225"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.14533272290826302" variance="0.12421125564582519"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat46">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.13999446251816985" variance="0.12039614606758063"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.16050261080452374" variance="0.13474165581487013"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat2">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.14823723495073948" variance="0.12626309021006454"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.15185973421762478" variance="0.12879848842644503"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat41">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.15825661613714498" variance="0.13321159267139035"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.14193620233116386" variance="0.12179044988430747"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat44">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.13463579520546365" variance="0.116509130940152"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.1655942982998837" variance="0.1381729597561865"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat89">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.17120624812533167" variance="0.14189480181368286"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.12541141824841" variance="0.10968352750680663"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat53">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.12461064580881843" variance="0.10908296584536298"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.17658194956569082" variance="0.14540089773901738"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat23">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.14760850003460926" variance="0.1258203638374448"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.15348684698953202" variance="0.12992876787627192"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat21">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.15181352529937012" variance="0.1287663119210183"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.14746096166695538" variance="0.1257163595362252"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat36">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.15683186820793243" variance="0.13223576640757428"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.14317973718726026" variance="0.122679433131963"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat8">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.135916337878683" variance="0.11744322006137774"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.166305773466307" variance="0.1386482962632101"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat20">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.1580085830968367" variance="0.13304200384952333"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.14224553936004355" variance="0.1220118789775743"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat67">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.1378083108373134" variance="0.11881731338650629"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.16214209705758617" variance="0.13585217050502493"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat4">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.13433008006275812" variance="0.11628564273860324"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.16623153257937587" variance="0.13859874324131752"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat81">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.15784130499988464" variance="0.13292756052127025"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.14194857581231904" variance="0.12179931072261019"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat84">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.16053505918183705" variance="0.13476368704026073"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.13765497785146874" variance="0.11870621800994569"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat27">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.14865831429823953" variance="0.12655915297334666"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.15345591328664407" variance="0.12990732904950825"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat55">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.15672227221337764" variance="0.13216053469086128"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.14329728525823454" variance="0.12276330638086896"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="u9">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.14976581066426708" variance="0.12733614570524074"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.14820955727684426" variance="0.12624361749429447"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat34">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.16364412450104981" variance="0.13686485810245336"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.13471627607711154" variance="0.1165679341219486"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat22">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.1625597009759812" variance="0.13613417767988392"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.13605261204187186" variance="0.11754243188340242"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat71">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.15459957084515816" variance="0.13069867662531656"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.1429384543047341" variance="0.12250718567090273"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat32">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.14948316836252049" variance="0.12713808382431066"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.15207627013784059" variance="0.12894921128413506"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat3">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.14351307076440323" variance="0.12291720236949165"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.15658021727832908" variance="0.13206298592085858"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat43">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.13506264276320343" variance="0.11682085837857792"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.1653777623796679" variance="0.13802809117486828"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat52">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.15729332502711058" variance="0.13255226801399123"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.14180009403845678" variance="0.12169296045440761"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat83">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.1722849034401606" variance="0.14260294857184372"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.12375955851419239" variance="0.1084432632758849"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat7">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.15425347823077457" variance="0.13045947577022995"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.14542552401692693" variance="0.12427707406671419"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat26">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.1542419418102951" variance="0.13045149828187405"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.14509144002573685" variance="0.12404004714242402"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat15">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.1254412680833391" variance="0.10970588943034067"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.1747877947981885" variance="0.1442371546733567"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="u3">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.15028494958584251" variance="0.12769951659905893"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.1500655794501225" variance="0.12754603439981943"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat70">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.14631065273067073" variance="0.12490397871348972"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.15316513647949714" variance="0.12970571053241298"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="u5">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.15193465771440437" variance="0.12885065058520248"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.15091934964983048" variance="0.12814283263634088"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat24">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.18873007083362175" variance="0.1531111642820717"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.10888663416565617" variance="0.09703046815085467"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat49">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.18544795920721718" variance="0.1510571467178663"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.11219654037466902" variance="0.09960860978776469"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat1">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.1648035347592349" variance="0.1376434627756774"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.13281694671979014" variance="0.11517673846878199"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat19">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.14299970005306753" variance="0.1225509189235195"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.15710609022742458" variance="0.13242389972616112"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="u1">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.14808149327426687" variance="0.12615349770942116"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.14949021257640624" variance="0.12714302200546984"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat77">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.11451627788929651" variance="0.10140243307317791"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.18876364176297358" variance="0.1531320623971491"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat72">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.13563946378717612" variance="0.1172415327360893"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.16683164641540252" variance="0.13899898125484603"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat91">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.15913915230382317" variance="0.1338140155930071"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.13866960330619416" variance="0.1194404775104327"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat73">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.1662686601601255" variance="0.1386235258935643"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.13196317652008216" variance="0.11454902964810625"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat57">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.14155764749313582" variance="0.12151921301441686"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.15937043727882402" variance="0.13397163408605403"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat87">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.13126139221522345" variance="0.11403197221441792"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.17245539360043555" variance="0.142714663903545"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat75">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.12487598347984587" variance="0.10928210531529474"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.1769160335568809" variance="0.14561688371318"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat54">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.1620059527929674" variance="0.13576015713813078"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.1393501447697295" variance="0.11993181500784679"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat33">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.1940945063565677" variance="0.15642196204396247"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.10136974436387933" variance="0.09109405237672198"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat61">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.13183821323919614" variance="0.11445703185420368"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.16714098344428222" variance="0.13920500818323994"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat59">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.13857548279919707" variance="0.11937245145137719"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.16404761315548516" variance="0.1371361268585155"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat63">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.14511086500080755" variance="0.12405383494463765"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.15460046029349897" variance="0.13069929105628839"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat9">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.15405735908262386" variance="0.13032382228089698"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.14674948650053207" variance="0.1252142077980256"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat99">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.12761588334371612" variance="0.11133020274738496"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.17302457373357422" variance="0.14308720370346628"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat76">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.144932050483376" variance="0.12392688431157604"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.15480462273255957" variance="0.13084028459889638"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat95">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.15552248448351447" variance="0.1313353743888274"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.14452225989259818" variance="0.12363570937314383"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="u0">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.1494254862601232" variance="0.1270976434017223"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.14749189536984336" variance="0.12573816925575992"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat86">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.1479834337001915" variance="0.12608447013564578"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.15228661931747878" variance="0.12909553797935444"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat97">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.16273274728317297" variance="0.1362509333303458"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.13568140760721623" variance="0.11727209632249097"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat58">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.15870653653584366" variance="0.13351890488177776"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.14120616694300775" variance="0.12126711844570809"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat69">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.16777993124293394" variance="0.13962995900069208"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.12942042614269098" variance="0.1126709125254857"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat88">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.16768763987909832" variance="0.13956862839626988"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.13104753891459822" variance="0.11387421454447003"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat0">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.12531436745806512" variance="0.10961080985209375"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.17603751639486254" variance="0.14504844230159775"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat56">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.14266514385916337" variance="0.12231193367208817"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.15873938973990942" variance="0.1335413289703753"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="u2">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.15072333356406176" variance="0.12800594336861731"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.14893959266500037" variance="0.12675672348730038"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat85">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.14160379317505364" variance="0.12155229201868224"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.159172461580341" variance="0.13383672214001116"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat25">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.13908885351053274" variance="0.11974327742459955"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.16208641639238783" variance="0.13581454309893012"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat94">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.13179206755727832" variance="0.11442305157142847"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.16924447524066422" variance="0.1406009159267251"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="u6">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.15027918137560278" variance="0.12769548210565562"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.15097503031502882" variance="0.12818170362181658"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat47">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.17967974896749037" variance="0.1473950698641907"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.11707787869039075" variance="0.10337078209695542"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat51">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.1329918552871415" variance="0.11530515479986694"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.16741938677027396" variance="0.1393902687890018"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat80">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.15165201541265777" variance="0.1286538147191817"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.14904476725481947" variance="0.12683055769417775"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat93">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.17823192819731892" variance="0.14646544105328196"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.11863075057536687" variance="0.10455762867869682"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat5">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.15923721187789852" variance="0.13388085531694568"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.140927763617016" variance="0.12106726214440706"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat18">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.10098982487713712" variance="0.09079101323363327"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.20178673067880917" variance="0.16106897908550916"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat79">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.16493620359474861" variance="0.13773238542396"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.13310772352693706" variance="0.11539019054946108"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat48">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.1463914076740269" variance="0.12496109651893617"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.1551015862802841" variance="0.13104521729868204"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat78">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.14101543573060152" variance="0.12113021570185666"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.15685243386374323" variance="0.13224988093997594"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat65">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.15136937311091114" variance="0.12845681908049833"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.15022024796456235" variance="0.1276542581510643"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat14">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.1411654091968344" variance="0.12123786952878722"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.15761958969536488" variance="0.13277578772475945"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat50">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.14825453958145868" variance="0.12627526416009519"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.15463758073696454" variance="0.13072493244630987"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat30">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.13936572760203964" variance="0.11994305465763053"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.16104704397535202" variance="0.13511102668794525"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat31">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.1530767633418703" variance="0.1296444009519929"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.1455492588284788" variance="0.12436480516807438"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat92">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.17240603585519484" variance="0.1426823277407794"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.12496597292682324" variance="0.10934961162251154"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat28">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.07759973235504487" variance="0.07157814697892939"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.2287114256724987" variance="0.17640264252504081"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat38">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.1450128054267322" variance="0.12398422477443652"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.15628944047118215" variance="0.13186318435381705"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat64">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.1644805149858102" variance="0.13742680826156112"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.1322353931054963" variance="0.114749327000936"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat62">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.1422152234604647" variance="0.12199018676224295"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.15808978197926205" variance="0.1330975358987369"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat6">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.17499019404259247" variance="0.14436875911645847"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.12375337177361478" variance="0.10843860783374062"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat39">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.14556078539950623" variance="0.12437297623859546"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.15654309683486353" variance="0.13203748875353735"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat45">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.15241918737454144" variance="0.12918771178029403"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.14969437501546684" variance="0.1272861021898399"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat66">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.11543342331741308" variance="0.10210868118397866"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.18719220965626468" variance="0.1521514193850883"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat12">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.17147735400659883" variance="0.14207300415525234"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.1274963498230592" variance="0.11124116369024131"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat82">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.15901801988878891" variance="0.13373142232463803"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.1416825459674825" variance="0.12160873522101726"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="u7">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.15049260515447266" variance="0.1278447140332067"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.14938503798658714" variance="0.12706928149815808"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="u8">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.15086177060981518" variance="0.12810262986345905"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.14931698384023362" variance="0.12702155526214673"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+			<BayesInput fieldName="cat90">
+				<TargetValueStats>
+					<TargetValueStat value="0">
+						<GaussianDistribution mean="0.15416695507717865" variance="0.13039963812515915"/>
+					</TargetValueStat>
+					<TargetValueStat value="1">
+						<GaussianDistribution mean="0.1451409339503576" variance="0.1240751763276035"/>
+					</TargetValueStat>
+				</TargetValueStats>
+			</BayesInput>
+		</BayesInputs>
+		<BayesOutput fieldName="label">
+			<TargetValueCounts>
+				<TargetValueCount value="0" count="173364"/>
+				<TargetValueCount value="1" count="161636"/>
+			</TargetValueCounts>
+		</BayesOutput>
+	</NaiveBayesModel>
+</PMML>
